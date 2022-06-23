@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+// as an excercutable we need to define that we creating a node excercutable, we do this with a serban-line(#!) at the top of the excercutable.
+
+const app = require("../app");
+// only once our app.js file has been exported can we import/require it in another place
+
+// this will be our excercutable file that will be responsible for starting up our application
+const port = 3000;
+
+// for us to be able to use the app var we will need to export it in the app.js  with module.exports
+app.listen(port, () => console.log(`Listening on port ${port}`));
+
+// !!!!this excercutable is responsible for starting up our application!!!!
